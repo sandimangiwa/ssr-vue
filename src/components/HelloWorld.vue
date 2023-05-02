@@ -2,8 +2,10 @@
   <div>
     <div class="text-center">
       <h2>{{ stores.count }}</h2>
-      <Button @click="onAdd">add</Button>
-      <Button @click="onMin">min</Button>
+      <div class="card flex justify-content-center flex-wrap gap-3">
+        <Button label="Add" severity="primary" @click="onAdd"></Button>
+        <Button label="Min" severity="danger" @click="onMin"></Button>
+      </div>
     </div>
   </div>
 </template>

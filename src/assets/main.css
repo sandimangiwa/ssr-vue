@@ -6,7 +6,7 @@ body {
     'Segoe UI Symbol';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ebeff2;
+  /* background-color: #ebeff2; */
   color: #6c757d;
   font-size: .96rem;
 }

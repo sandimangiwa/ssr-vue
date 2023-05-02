@@ -15,10 +15,6 @@ const props = defineProps<props>();
 <template>
   <div class="flex justify-content-between">
     <div class="text-2xl font-bold text-black">{{ title }}</div>
-    <Breadcrumb
-      :home="home"
-      :model="breadcrumb"
-      class="bg-transparent border-transparent text-white"
-    />
+    <Breadcrumb :home="home" :model="breadcrumb" />
   </div>
 </template>
