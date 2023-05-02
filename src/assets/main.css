@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ebeff2;
+  color: #6c757d;
+  font-size: .96rem;
+}
+
+.layout-sidebar {
+  width: 270px;
+  user-select: none;
+  transition: transform 1s, left 1s;
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+  height: 100vh;
+}
+
+/* Side Menu */
+.layout-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.layout-menu li.layout-menuitem-category {
+  margin-top: 0.75rem;
+}
+.layout-menu li.layout-menuitem-category:first-child {
+  margin-top: 0;
+}
+.layout-menu li .layout-menuitem-root-text {
+  text-transform: uppercase;
+  color: var(--surface-900);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-align: left;
+}
+.layout-menu li a {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: color 0.2s;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.15s;
+}
+.layout-menu li a span {
+  margin-left: 0.5rem;
+}
+.layout-menu li a .menuitem-toggle-icon {
+  margin-left: auto;
+}
+.layout-menu li a:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  transition: box-shadow 0.2s;
+  box-shadow: inset var(--focus-ring);
+}
+.layout-menu li a:hover {
+  background-color: var(--surface-hover);
+}
+.layout-menu li a.router-link-exact-active {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.layout-menu li a .p-badge {
+  margin-left: auto;
+}
+.layout-menu li.active-menuitem > a .menuitem-toggle-icon:before {
+  content: '\e933';
+}
+.layout-menu li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.layout-menu li ul.layout-submenu-wrapper-enter-from,
+.layout-menu li ul.layout-submenu-wrapper-leave-to {
+  max-height: 0;
+}
+.layout-menu li ul.layout-submenu-wrapper-enter-to,
+.layout-menu li ul.layout-submenu-wrapper-leave-from {
+  max-height: 1000px;
+}
+.layout-menu li ul.layout-submenu-wrapper-leave-active {
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+.layout-menu li ul.layout-submenu-wrapper-enter-active {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+.layout-menu li ul ul {
+  padding-left: 1rem;
+}
+/* End Side Menu */
+
+.p-paginator .p-paginator-current {
+  margin-left: auto;
+}
+.p-datatable.p-datatable-sm .p-datatable-header {
+  padding: 0 0 0.5rem 0;
+  background: #fff;
+}
+
+.text-xs { font-size: 0.775rem !important }
+
+.p-input-icon-left > i, .p-input-icon-left > svg, .p-input-icon-right > i, .p-input-icon-right > svg {
+  right: 0.75rem;
+}
